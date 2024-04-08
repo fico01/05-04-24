@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05/04/2024 às 15:34
+-- Tempo de geração: 08/04/2024 às 15:01
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `beneficios` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -42,7 +43,8 @@ CREATE TABLE `beneficios` (
 CREATE TABLE `custos` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -54,7 +56,8 @@ CREATE TABLE `custos` (
 CREATE TABLE `equipes` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -66,7 +69,8 @@ CREATE TABLE `equipes` (
 CREATE TABLE `grupos_de_entregas` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -78,7 +82,8 @@ CREATE TABLE `grupos_de_entregas` (
 CREATE TABLE `justificativas` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -90,7 +95,8 @@ CREATE TABLE `justificativas` (
 CREATE TABLE `linhas_do_tempo` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -102,7 +108,8 @@ CREATE TABLE `linhas_do_tempo` (
 CREATE TABLE `objetivos_smart` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -114,7 +121,8 @@ CREATE TABLE `objetivos_smart` (
 CREATE TABLE `premissas` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -126,7 +134,8 @@ CREATE TABLE `premissas` (
 CREATE TABLE `produtos` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -150,7 +159,8 @@ CREATE TABLE `projetos` (
 CREATE TABLE `requisitos` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -162,7 +172,8 @@ CREATE TABLE `requisitos` (
 CREATE TABLE `restricoes` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -174,7 +185,8 @@ CREATE TABLE `restricoes` (
 CREATE TABLE `riscos` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -186,7 +198,8 @@ CREATE TABLE `riscos` (
 CREATE TABLE `stakeholders` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `id_projeto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
